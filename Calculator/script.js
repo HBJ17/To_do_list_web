@@ -1,21 +1,21 @@
-// Get display element
 const display = document.getElementById("display");
 
-// Add value to display
 function appendValue(value) {
     display.value += value;
 }
 
-// Clear display
 function clearDisplay() {
     display.value = "";
 }
 
-// Calculate result
+function backspace() {
+    display.value = display.value.slice(0, -1);
+}
+
 function calculateResult() {
     try {
         display.value = eval(display.value);
-    } catch (error) {
+    } catch {
         display.value = "Error";
     }
 }
