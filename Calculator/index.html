@@ -12,29 +12,32 @@
 <body>
     <h1>Basic Calculator</h1>
     <br>
-    <form id="myform" Name="Calculator">
-        <input class="Display"> <br>
-        <input type="button" value="0">
-        <input type="button" value="1">
-        <input type="button" value="2">
-        <input type="button" value="+" style=" background-color : #cc5c11; "><br>
-        <input type="button" value="3">
-        <input type="button" value="4">
-        <input type="button" value="5">
-        <input type="button" value="-" style=" background-color : #ba55d3; "><br>
-        <input type="button" value="6">
-        <input type="button" value="7">
-        <input type="button" value="8">
-        <input type="button" value="x" style=" background-color : #7db1b2; "><br>
-        <input type="button" value="9">
-        <input type="button" value="C" style=" background-color : #cc0000; ">
-        <input type="button" value="=">
-        <input type="button" value="&#247;" style=" background-color : greenyellow; ">
+
+    <form id="myform" name="Calculator">
+        <input class="Display" id="display" readonly> <br>
+
+        <input type="button" value="0" onclick="appendValue('0')">
+        <input type="button" value="1" onclick="appendValue('1')">
+        <input type="button" value="2" onclick="appendValue('2')">
+        <input type="button" value="+" onclick="appendValue('+')" style="background-color:#cc5c11;"><br>
+
+        <input type="button" value="3" onclick="appendValue('3')">
+        <input type="button" value="4" onclick="appendValue('4')">
+        <input type="button" value="5" onclick="appendValue('5')">
+        <input type="button" value="-" onclick="appendValue('-')" style="background-color:#ba55d3;"><br>
+
+        <input type="button" value="6" onclick="appendValue('6')">
+        <input type="button" value="7" onclick="appendValue('7')">
+        <input type="button" value="8" onclick="appendValue('8')">
+        <input type="button" value="x" onclick="appendValue('*')" style="background-color:#7db1b2;"><br>
+
+        <input type="button" value="9" onclick="appendValue('9')">
+        <input type="button" value="C" onclick="clearDisplay()" style="background-color:#cc0000;">
+        <input type="button" value="=" onclick="calculateResult()">
+        <input type="button" value="&#247;" onclick="appendValue('/')" style="background-color:greenyellow;">
     </form>
+
+    <script src="script.js"></script>
 </body>
-
-<footer>
-
-</footer>
 
 </html>
